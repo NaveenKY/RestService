@@ -5,6 +5,11 @@
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
+    <bean id="properties" class="org.apache.camel.component.properties.PropertiesComponent">
+        <property name="location" value="classpath:RouteConfiguration.properties"/>
+    </bean>
+
+    <bean id="exceptionProcessor" class="com.rest.restservice.processors.exception.ExceptionProcessor" />
     <bean id="myProcessor" class="com.rest.restservice.processors.MyProcessor" />
 
     <camelContext xmlns="http://camel.apache.org/schema/spring">

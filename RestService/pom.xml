@@ -17,6 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <camel-version>2.15.0</camel-version>
+        <json-version>1.7.2</json-version>
         <spring-version>4.1.5.RELEASE</spring-version>
         <slf4j-vesrion>1.7.10</slf4j-vesrion>
         <log4j-version>1.2.17</log4j-version>
@@ -29,6 +30,11 @@
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-core</artifactId>
             <version>${camel-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${json-version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>

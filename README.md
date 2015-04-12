@@ -8,4 +8,8 @@ Template Code for creating Restful endpoint
 
 > http://localhost:8001/restapi
 
-### Expected Output:: Hello
+### Expected Output :>
+      POST   :: Create Method Called
+      PUT    :: Update Method Called
+      DELETE :: Delete Method Called
+      GET    :: Get Method Called

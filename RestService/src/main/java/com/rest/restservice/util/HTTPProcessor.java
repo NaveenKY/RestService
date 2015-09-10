@@ -1,6 +1,7 @@
 package com.rest.restservice.util;
 
 import com.rest.restservice.constants.HTTPConstants;
+import java.text.MessageFormat;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
@@ -39,7 +40,9 @@ public abstract class HTTPProcessor implements Processor {
      * @param exchange
      * @throws java.lang.Exception
      */
-    public abstract void create(Exchange exchange) throws Exception;
+    public void create(Exchange exchange) throws Exception {
+        throw new UnsupportedOperationException(MessageFormat.format(HTTPConstants.UNSUPPORTED_METHOD, HTTPConstants.POST));
+    }
 
     /**
      * This method is used to perform PUT operation for rest call.
@@ -47,7 +50,9 @@ public abstract class HTTPProcessor implements Processor {
      * @param exchange
      * @throws java.lang.Exception
      */
-    public abstract void update(Exchange exchange) throws Exception;
+    public void update(Exchange exchange) throws Exception {
+        throw new UnsupportedOperationException(MessageFormat.format(HTTPConstants.UNSUPPORTED_METHOD, HTTPConstants.PUT));
+    }
 
     /**
      * This method is used to perform DELETE operation for rest call.
@@ -55,7 +60,9 @@ public abstract class HTTPProcessor implements Processor {
      * @param exchange
      * @throws java.lang.Exception
      */
-    public abstract void delete(Exchange exchange) throws Exception;
+    public void delete(Exchange exchange) throws Exception {
+        throw new UnsupportedOperationException(MessageFormat.format(HTTPConstants.UNSUPPORTED_METHOD, HTTPConstants.DELETE));
+    }
 
     /**
      * This method is used to perform GET operation for rest call.
@@ -63,5 +70,7 @@ public abstract class HTTPProcessor implements Processor {
      * @param exchange
      * @throws java.lang.Exception
      */
-    public abstract void get(Exchange exchange) throws Exception;
+    public void get(Exchange exchange) throws Exception {
+        throw new UnsupportedOperationException(MessageFormat.format(HTTPConstants.UNSUPPORTED_METHOD, HTTPConstants.GET));
+    }
 }

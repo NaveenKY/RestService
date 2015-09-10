@@ -14,4 +14,5 @@ public class HTTPConstants {
     
     //Unsupported HTTP Method Message
     public static final String UNSUPPORTED_METHOD = "HTTP Method Not supported yet.";
+    public static final String AUTO_START_JOB = "Auto Start Job Called :: {0}";
 }

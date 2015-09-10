@@ -11,9 +11,14 @@
 
     <bean id="exceptionProcessor" class="com.rest.restservice.processors.exception.ExceptionProcessor" />
     <bean id="myProcessor" class="com.rest.restservice.processors.MyProcessor" />
+    <bean id="autoProcessor" class="com.rest.restservice.processors.AutoProcessor" />
 
     <camelContext xmlns="http://camel.apache.org/schema/spring">
         <package>com.rest.restservice.routes</package>
+        <route id="testJob">
+            <from uri="timer://simpleTimer?period=3600000"/>
+            <process ref="autoProcessor"></process>
+        </route>
     </camelContext>
 
 </beans>
